@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## SETUP DATABASE IN LOCAL
+Install json-server https://github.com/typicode/json-server
+## `npm install -g json-server`
+
+
+In the server directory , you can run to start server in local:
+## `json-server  --watch db.json`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
