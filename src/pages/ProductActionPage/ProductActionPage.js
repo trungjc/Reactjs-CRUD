@@ -115,7 +115,7 @@ class ProductActionPage extends Component{
                                    checked={chkbStatus}
                                    onChange={this.onChange}
                             />
-                           <label htmlFor="chkbStatus"> &nbsp; Out stock</label>
+                           <label htmlFor="chkbStatus"> &nbsp; In stock</label>
                         </div>
                     </div>
                     <div className="d-flex">

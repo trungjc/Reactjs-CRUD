@@ -4,35 +4,42 @@
       "id": 3,
       "name": "Iphone 8xs",
       "price": "500",
-      "description": "Dien thoai Tau",
+      "description": "Made in USA",
       "status": false
     },
     {
+      "id": 5,
       "name": "Iphone 7 plus",
       "price": "10000",
-      "description": "Dien thoai Trung Quoc",
-      "status": true,
-      "id": 5
+      "description": "Made in USA",
+      "status": true
     },
     {
       "id": 6,
       "name": "Gallaxy J5 Pro",
       "price": "1000",
-      "description": "Dien thoai Trung Quoc",
-      "status": true
+      "description": "Made in Korea",
+      "status": false
     },
     {
       "id": 8,
-      "name": "Oppo",
+      "name": "Samsung galaxy s9",
       "price": "1000",
-      "description": "Dien thoai Trung Quoc",
-      "status": false
+      "description": "Made in Korean",
+      "status": true
     },
     {
       "id": 9,
       "name": "Ipad mini 2",
       "price": "500",
-      "description": "USA product",
+      "description": "Made in USA",
+      "status": true
+    },
+    {
+      "id": 10,
+      "name": "Ipad pro",
+      "price": "700",
+      "description": "Made in USA",
       "status": true
     }
   ],
