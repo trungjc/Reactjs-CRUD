@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-// import thunk from 'redux-thunk';
+
 import appReducers from './reducers/index';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-
+import thunk from 'redux-thunk';
 import {composeWithDevTools} from "redux-devtools-extension";
 const store = createStore(
     appReducers,
-    window.__REDUX_DEVTOOLS_EXTENSTION__ && Window.__REDUX_DEVTOOLS_EXTENSTION__()
-    // composeWithDevTools(applyMiddleware(thunk)),
+   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    //applyMiddleware(thunk)
+    composeWithDevTools(applyMiddleware(thunk)),
 );
 
 ReactDOM.render(

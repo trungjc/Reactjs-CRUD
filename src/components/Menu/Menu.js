@@ -8,7 +8,7 @@ const menus = [
     },
     {
         name:"Product Management",
-        to: '/product-list',
+        to: '/products',
         exact: false
     },
     {

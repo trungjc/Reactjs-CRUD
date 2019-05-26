@@ -2,13 +2,26 @@ import React, {Component}  from 'react';
 import ProductList from "../../components/ProductList/ProductList";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import {connect} from "react-redux";
+import {Link} from "react-router-dom";
+import { actDeleteProductsRequest, actFetchProductsRequest} from "./../../actions/index";
+class ProductListPage extends Component {
+    // constructor(props) {
+    //     super(props);
+    // }
+    componentDidMount() {
+      this.props.fetchAllProducts();
+    }
 
-class ProductListPage extends Component{
+    onDelete = (id) => {
+        this.props.deleteProduct(id)
+    }
+
+
     render() {
         var {products} = this.props;
         return (
             <div className="content pt-5 pb-5">
-                <h1 >Product List page</h1>
+                <Link to="product/add" className="btn btn-info mb-4" ><i className="fa fa-plus"></i> Create new product</Link>
                 <ProductList>
                     {this.showProducts(products)}
                 </ProductList>
@@ -26,6 +39,7 @@ class ProductListPage extends Component{
                         key={index}
                         product={product}
                         index = {index}
+                        onDelete={this.onDelete}
                     />
                 )
             })
@@ -39,4 +53,15 @@ const mapStateToProps = (state) => {
         products: state.products
     }
 }
-export default connect(mapStateToProps,null) (ProductListPage);
+const mapDispatchToProps = (dispatch,props) => {
+    return {
+        fetchAllProducts: () =>  {
+            dispatch(actFetchProductsRequest());
+        },
+        deleteProduct: (id) => {
+            dispatch(actDeleteProductsRequest(id))
+        }
+    }
+
+}
+export default connect(mapStateToProps,mapDispatchToProps) (ProductListPage);
